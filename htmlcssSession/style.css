@@ -1,0 +1,43 @@
+h1{
+    color:orange !important;
+    font-size: 60px;
+    font-family :'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+img {
+    width: 500px;
+    height: 300px;
+}
+
+header {
+    border: 1px solid #ccc;
+    padding: 0;
+}
+nav ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+nav li a {
+    color:#000;
+    font-size: 20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height:30vh;
+    border:1px solid #000
+}
+.col{
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 10px;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 30.333%;
+}
