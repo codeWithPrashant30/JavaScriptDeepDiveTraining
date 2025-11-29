@@ -7,7 +7,16 @@ console.log("Day 5 of JS - function");
 function callMe(name, city) {
     console.log("Hello First function===>" , name, city)
     // console.log(arguments)
-     console.log(this);
+     console.log(this); // undefined
+     console.log(arguments.length) //2
+
+}
+
+let obj = {
+  name:"prashant",
+  fullName: function() {
+   return this.name
+  }
 }
 
 callMe("codeWithPrashant", "Noida"); //arguments

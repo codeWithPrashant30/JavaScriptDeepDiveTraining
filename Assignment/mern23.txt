@@ -1,0 +1,29 @@
+ Create a parent component
+
+Make an array of 5 students.
+Each student should include:
+
+id
+name
+age
+city
+
+skills → array of skills (example: ["React", "JS"])
+
+const students = [
+  {
+    id: 1,
+    name: "Prashant",
+    age: 25,
+    city: "Noida",
+    skills: ["React", "JavaScript", "Node"]
+  },
+  {
+    id: 2,
+    name: "Aman",
+    age: 23,
+    city: "Delhi",
+    skills: ["Python", "SQL"]
+  },
+  // Add 3 more students...
+];
