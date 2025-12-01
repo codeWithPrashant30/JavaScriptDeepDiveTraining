@@ -1,6 +1,8 @@
+import style from "./Student.module.css"
+
 export const StudentList = ({ students }) => {
   return (
-    <ul style={{listStyle:"none"}}>
+    <ul className={style.list} style={{listStyle:"none"}}>
       {students.map((student, index) => {
         return (
           <li style={{"border":"1px solid black"}} key={index}>
