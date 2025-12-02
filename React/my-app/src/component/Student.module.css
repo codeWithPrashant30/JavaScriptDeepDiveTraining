@@ -1,6 +1,18 @@
 .list {
     background-color: gray;
-    color:#fff;
+    color: #fff;
     list-style: none;
     padding: 10px;
+}
+.h2{
+    color:red;
+}
+
+.listItem {
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333;
 }
