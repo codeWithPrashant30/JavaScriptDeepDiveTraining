@@ -1,0 +1,28 @@
+Component Fiber
+|
+|— memoizedState (first hook)
+     |
+     |— hook1 (state A)
+     |     memoizedState: valueA
+     |
+     |— hook2 (state B)
+           memoizedState: valueB
+
+           React keeps a linked list of hooks for each component inside its Fiber tree.
+
+Each useState creates a hook object:
+
+hook = {
+  memoizedState: current value,
+  queue: pending updates,
+  next: pointer to next hook
+}
+
+
+During each render:
+
+React walks through this hook list
+
+Provides the correct state in correct order
+
+Applies queued updates from setState

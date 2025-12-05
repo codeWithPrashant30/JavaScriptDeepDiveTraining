@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.birthday-text {
+    font-size: 4rem;
+    color: #ff4081;
+    margin-bottom: 0;
+    animation: pulse 2s infinite;
+}
+
+.name-text {
+    font-size: 3rem;
+    color: #3f51b5;
+    margin-top: 0;
+}
+
+.balloon-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.balloon {
+    width: 100px;
+    height: 120px;
+    background-color: #ff4081;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    margin: 0 1rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+.balloon:nth-child(2) {
+    background-color: #3f51b5;
+    animation-delay: 0.5s;
+}
+
+.balloon:nth-child(3) {
+    background-color: #ffeb3b;
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.birthday-message {
+    font-size: 2rem;
+    color: #4caf50;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

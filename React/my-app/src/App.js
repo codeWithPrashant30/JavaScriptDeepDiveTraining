@@ -2,8 +2,63 @@ import './App.css';
 import { StudentList } from './component/StudentList';
 import styled from 'styled-components';
 import logo from '../src/logo.svg'
+import { useState } from 'react';
+
+
+const Counter = ()=>{
+  // single state variable
+const [counter, setCounter] = useState(0); // syntax
+
+const [updateMyInfo, setUpdateMyInfo] = useState({name:"codeWithPrashant", age:30});
+
+const [search, setSearch]  = useState("")
+
+console.log(updateMyInfo);
+
+
+  return <div className='p-4'>
+     <div >
+     Value <span className='text-5xl'>{counter}</span>
+      </div>
+     <button  class="px-4 py-2 bg-blue-600 text-white rounded-lg" onClick={()=> setCounter(counter+1)}>
+        increase by 1
+    </button>
+    <button  class="px-4 m-2 py-2 bg-blue-600 text-white rounded-lg" onClick={()=> setCounter(counter-1)}>
+        decrease by 1
+    </button>
+
+  {/* how to update object using state */}
+   <div >
+     my Age <span className='text-5xl'>{updateMyInfo.age}</span>
+      </div>
+   <button  class="px-4 m-2 py-2 bg-blue-600 text-white rounded-lg" onClick={()=> setUpdateMyInfo({...updateMyInfo, age :32})}>
+      Update My Object
+    </button>
+
+    <input style={{color:"#000"}} placeholder='Enter your Name' onChange={(e)=>setSearch(e.target.value)} value={search}>
+
+    </input>
+    <div>{search}</div>
+  </div>
+
+}
 
 function App() {
+
+// usestate
+//Array Destructing //es6
+// const [first, second] = [1,2]
+
+// console.log("first", first)
+// console.log("second", second)
+
+
+
+
+// useState(0) // 0 intial value
+// counter -- varibale
+//setCounter -- function for updating  value of this counter variable
+
 
   const students = [
     { id: 1, name: "Prashant", age: 25 },
@@ -53,6 +108,7 @@ const DisplayImages = ({ images }) => {
           />
         ))}
     </div>
+
   );
 };
 
@@ -62,15 +118,24 @@ const DisplayImages = ({ images }) => {
       <header className="flex justify-center">
         <img src={logo} alt='logo'  className="w-20 h-20 "/>
       </header>
-     <DisplayImages images={images}/>
+     {/* <DisplayImages images={images}/> */}
 
-      <h1 class="text-5xl font-bold text-green-500">MERN STACK | 25 days</h1>
+      <h1 class="text-5xl font-bold text-green-500">MERN STACK | 26 days</h1>
 
-        <p>This is my first React Application</p>
+        {/* <p>This is my first React Application</p> */}
+
+  
+      <div style={{border:"1px solid #fff"}}>
+        <h3  style={{color:"#fff"}}>
+        Counter Component
+      </h3>
+        <Counter/>
+      </div>
+   
         {/* <Welcome greetings="Hello Everyone, How are you ?" myYTchannelName="codeWithPrashant1"  arr = {arr}/> */}
-        <Button $primary>Primary Button</Button>
+        {/* <Button $primary>Primary Button</Button>
         <Button>Secondary Button</Button>
-        <StudentList students={students}/>
+        <StudentList students={students}/> */}
     </div>
   );
 }
