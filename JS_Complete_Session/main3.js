@@ -56,29 +56,30 @@ console.log("storage, promises, async await");
 // resolve
 // reject
 
-// const myPromise = new Promise((resolve, reject) => {
-//   let success = false;
+const myPromise = new Promise((resolve, reject) => {
 
-//   setTimeout(() => {
-//     if (success) {
-//       resolve(" Data fetched successfully!");
-//     } else {
-//       reject(" Failed to fetch data!");
-//     }
-//   }, 2000);
-// });
+  let success = false;
+
+  setTimeout(() => {
+    if (success) {
+      resolve(" Data fetched successfully!");
+    } else {
+      reject(" Failed to fetch data!");
+    }
+  }, 2000);
+});
 
 
-// myPromise
-//   .then(result => {
-//     console.log(result); // If resolved
-//   })
-//   .catch(error => {
-//     console.error(error); // If rejected
-//   })
-//   .finally(() => {
-//     console.log("Promise completed!"); // Runs always
-//   });
+myPromise
+  .then(result => {
+    console.log(result); // If resolved
+  })
+  .catch(error => {
+    console.error(error); // If rejected
+  })
+  .finally(() => {
+    console.log("Promise main  apko reject ya resolve mil gya check kr lo!"); // Runs always
+  });
 
 // function fetchData() {
 //   return new Promise(resolve => {
