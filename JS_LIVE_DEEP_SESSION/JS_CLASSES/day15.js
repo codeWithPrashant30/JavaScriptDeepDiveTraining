@@ -71,12 +71,22 @@ let  child2 = {
     city:"Noida"
 }
 
+let value = child2?.profession ?? "Ye undefined hai"
+
+console.log("value", value)
+
+// user?.address?.city    
+
+
 
 const newObj = {...child2, name:"Titu2"}
 
-console.log(newObj)
+console.log(newObj);
 
 
+
+// JSON Method (Not recommended for Dates, Functions)
+// const deepCopy = JSON.parse(JSON.stringify(user));
 
 // spread operator
 

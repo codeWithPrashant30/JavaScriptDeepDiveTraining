@@ -49,7 +49,7 @@ const UseRefExamples = () => {
             className="bg-green-500 text-white px-4 py-2 rounded"
           >
             Increment State (Rerender)
-          </button>
+          </button> 
           <button 
             onClick={incrementWithoutRerender}
             className="bg-purple-500 text-white px-4 py-2 rounded"
